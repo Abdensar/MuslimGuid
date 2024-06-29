@@ -485,7 +485,7 @@ const Main = ({ children }) => {
     const city = seCitie.name || "Tan-Tan";
 
     const response = await axios.get(
-      `http://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${city}&country=Morocco`
+      `https://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${city}&country=Morocco`
     );
     const apiData = response.data.data;
     const formattedDataArray = apiData.map((data, index) => ({
