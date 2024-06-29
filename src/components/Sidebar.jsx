@@ -5,7 +5,7 @@ import { GiPrayerBeads } from "react-icons/gi";
 import { MdLibraryBooks } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const Sidebar = ({currentPath}) => {
+const Sidebar = () => {
   const [check,setCheck]=useState(false);
   const [show, setShow] = useState(false);
   const [Menu, setMenu] = useState([

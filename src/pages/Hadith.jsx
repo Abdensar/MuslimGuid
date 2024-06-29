@@ -28,8 +28,6 @@ const Hadith = () => {
     share,
     setShare,
     HFavorite,
-    alPick,
-    AlarmM,
   } = useContext(PrayerContext);
 
   return (

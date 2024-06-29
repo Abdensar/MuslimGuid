@@ -28,8 +28,6 @@ const Adkar = () => {
     share,
     setShare,
     AFavorite,
-    alPick,
-    AlarmM,
   } = useContext(PrayerContext);
 
   return (
