@@ -47,7 +47,7 @@ const Home = () => {
     HFavorite,
     AFavorite,
     fAdkar,
-    fHadith
+    fHadith,
   } = useContext(PrayerContext);
   return (
     <>
@@ -184,14 +184,14 @@ const Home = () => {
                         setPick(true);
                         setAlarmI(index);
                         setTSound();
-                        console.log("prayers:")
-                        console.log(prayers)
-                        console.log("fHadith:")
-                        console.log(fHadith)
-                        console.log("fAdkar:")  
-                        console.log(fAdkar)  
-                        console.log("seCitie:")
-                        console.log(seCitie)
+                        console.log("prayers:");
+                        console.log(prayers);
+                        console.log("fHadith:");
+                        console.log(fHadith);
+                        console.log("fAdkar:");
+                        console.log(fAdkar);
+                        console.log("seCitie:");
+                        console.log(seCitie);
                       }}
                     />
                   )}
@@ -220,7 +220,7 @@ const Home = () => {
                   <span
                     className="inline-block justify-self-end place-content-center "
                     onClick={() => {
-                      AFavorite(rDikr.index);
+                      AFavorite(rDikr.Index);
                       rDikr.Object.favorie = !rDikr.Object.favorie;
                     }}
                   >
@@ -298,7 +298,7 @@ const Home = () => {
                   <span
                     className="inline-block justify-self-end place-content-center "
                     onClick={() => {
-                      HFavorite(rHadith.index);
+                      HFavorite(rHadith.Index);
                       rHadith.Object.favorie = !rHadith.Object.favorie;
                     }}
                   >
@@ -351,7 +351,6 @@ const Home = () => {
 
       {pick && NotModl(alarmI)}
       {pickP && PModel()}
-     
     </>
   );
 };
