@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+import Main from "./components/Main"
+import Home from "./pages/Home"
+// import Home from "./pages/Home2"
+// import Home from "./pages/Home3"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter as Router,Route,Routes as Switch } from 'react-router-dom'
+import Adkar from './pages/Adkar'
+
+import Hadith from './pages/Hadith'
+import User from './pages/User'
+const App = () => {
+  return (<>
+  <Router>
+  <Header/>
+  <div className='flex'>
+  <Sidebar />
+  <Main>
+    <Switch>
+      <Route  path="/" element={<Home/>}/>
+      <Route  path="/Adkar" element={<Adkar/>}/>
+      <Route  path="/Hadith" element={<Hadith/>}/>
+      <Route  path="/User" element={<User/>}/>
+    </Switch>
+  </Main>
+  </div>
+  </Router>
+
+  
+  </>
+    
+ 
+  )
 }
 
-export default App;
+export default App

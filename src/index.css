@@ -1,13 +1,52 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 15px;
+    }
+      .scrollbar::-webkit-scrollbar-track {
+        background: #232323 ; /* Track color */
+        
+      }
+      
+      .scrollbar::-webkit-scrollbar-thumb {
+        background: #D4B258;
+        border: 2px solid  #232323;
+        border-radius: 10px; 
+        cursor: pointer;
+      }
+      .scrollbar::-webkit-scrollbar-thumb:active {
+        background: #d4b3586a;
+      }
+      .scrollbar::-webkit-scrollbar-button:single-button {
+        background-color: #232323;
+        border: 1px solid  #232323 ;
+        height: 13px;
+        
+      }
+      /* Up */
+      .scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent #D4B258  transparent;
+        border-top-right-radius: 6px;
+      }
+      
+      .scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+        border-color: transparent transparent #d4b3586a transparent;
+      }
+      /* Down */
+      .scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+        border-width: 8px 8px 0 8px;
+        border-color: #D4B258  transparent transparent transparent;
+        border-bottom-right-radius: 5px;
+      }
+      
+      .scrollbar::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+        border-color: #d4b3586a transparent transparent transparent;
+      }
+  }
+body{
+    background-color: #1a1a1a;
 }
