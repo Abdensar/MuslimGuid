@@ -768,7 +768,7 @@ const Main = ({ children }) => {
   const [check, setCheck] = useState(false);
   const AFavorite = (index) => {
     const updatedAdkar = [...adkar];
-    updatedAdkar[index].favorite = !updatedAdkar[index].favorite;
+    updatedAdkar[index].favorie = !updatedAdkar[index].favorie;
     setAdkar(updatedAdkar);
     setCheck(!check);
   };
@@ -820,7 +820,7 @@ const Main = ({ children }) => {
 
   const HFavorite = (index) => {
     const updatedHadith = [...hadith];
-    updatedHadith[index].favorite = !updatedHadith[index].favorite;
+    updatedHadith[index].favorie = !updatedHadith[index].favorie;
     setHadith(updatedHadith);
     setCheck(!check);
   };
