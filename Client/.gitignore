@@ -10,9 +10,6 @@
 
 # production
 /build
-# env for the server 
-server/.env
-server/node_modules
 # misc
 .DS_Store
 .env.local
